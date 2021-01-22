@@ -10,8 +10,6 @@ function kilometerToMeter(kilometer) {
 }
 console.log(kilometerToMeter(5)); //Invoking function and console output for testing purpose;
 
-
-
 // Problem-02: budgetCalculator
 function budgetCalculator(watches, phones, laptops) {
   //Checking the given values negative or not;
@@ -26,3 +24,28 @@ function budgetCalculator(watches, phones, laptops) {
   }
 }
 console.log(budgetCalculator(2, 2, 3)); //Invoking function and console output for testing purpose;
+
+// Problem-03: hotelCost
+function hotelCost(days) {
+  var totalRent = 0;
+  var firstTenDays, secondTenDays, thirdTenDays, remainingDays;
+  //Checking the given value is negative or not;
+  if (days <= 0) {
+    return "Your entire value must be positive and value should be greater than Zero.";
+  } else if (days <= 10) {
+    totalRent = days * 100;
+  } else if (days <= 20) {
+    firstTenDays = 10 * 100;
+    remainingDays = days - 10;
+    secondTenDays = remainingDays * 80;
+    totalRent = firstTenDays + secondTenDays;
+  } else {
+    firstTenDays = 10 * 100;
+    secondTenDays = 10 * 80;
+    remainingDays = days - 20;
+    thirdTenDays = remainingDays * 50;
+    totalRent = firstTenDays + secondTenDays + thirdTenDays;
+  }
+  return totalRent;
+}
+console.log(hotelCost(25)); //Invoking function and console output for testing purpose;
