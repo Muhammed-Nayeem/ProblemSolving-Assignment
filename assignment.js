@@ -10,6 +10,8 @@ function kilometerToMeter(kilometer) {
 }
 console.log(kilometerToMeter(5)); //Invoking function and console output for testing purpose;
 
+
+
 // Problem-02: budgetCalculator
 function budgetCalculator(watches, phones, laptops) {
   //Checking the given values negative or not;
@@ -24,6 +26,8 @@ function budgetCalculator(watches, phones, laptops) {
   }
 }
 console.log(budgetCalculator(2, 2, 3)); //Invoking function and console output for testing purpose;
+
+
 
 // Problem-03: hotelCost
 function hotelCost(days) {
@@ -49,3 +53,23 @@ function hotelCost(days) {
   return totalRent;
 }
 console.log(hotelCost(25)); //Invoking function and console output for testing purpose;
+
+
+
+// Problem-04: megaFriend
+function megaFriend(arrOfFriends) {
+  // Checking the given array is empty or not;
+  if (arrOfFriends.length <= 0) {
+    return "Array of friends name can not be empty";
+  }
+  var maxElement = arrOfFriends[0];
+  for (var i = 0; i < arrOfFriends.length; i++) {
+    var element = arrOfFriends[i];
+    if (element.length > maxElement.length) {
+      maxElement = element;
+    }
+  }
+  return maxElement;
+}
+var friendsName = ["Pranab Roy", "Muhammed Sohel Islam", "Shuvo Paul", "Muhammed Shakib", "Crescent Debanth"];
+console.log(megaFriend(friendsName)); // Invoking function and console output for testing purpose;
